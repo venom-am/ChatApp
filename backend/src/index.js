@@ -16,7 +16,7 @@ const __dirname = path.resolve();
 // ✅ CORS should be BEFORE routes (you already did correct placement 👍)
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "*",
     credentials: true,
   })
 );
