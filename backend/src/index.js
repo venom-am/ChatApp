@@ -28,6 +28,10 @@ app.use(cookieParser());
 // ✅ Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Server is running!" });
+});
+
 
 // ✅ Production frontend serving
 if (process.env.NODE_ENV === "production") {
